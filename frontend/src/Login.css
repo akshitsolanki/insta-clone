@@ -1,0 +1,79 @@
+body {
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+}
+
+.logo {
+  width: 175px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 9px;
+  margin: 6px 0;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background: #fafafa;
+}
+
+button {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  padding: 9px;
+  width: 100%;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider div {
+  flex: 1;
+  height: 1px;
+  background: #dbdbdb;
+}
+
+.divider span {
+  margin: 0 10px;
+  font-size: 13px;
+  color: #8e8e8e;
+}
+
+.fb-login {
+  color: #385185;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.forgot-password {
+  color: #00376b;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  margin-top: 12px;
+}
