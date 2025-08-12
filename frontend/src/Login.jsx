@@ -7,7 +7,7 @@ function Login() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:8000/login", {
+    await fetch("https://insta-clone-nmir.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),
@@ -57,3 +57,4 @@ function Login() {
 }
 
 export default Login;
+
