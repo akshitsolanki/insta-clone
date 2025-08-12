@@ -33,5 +33,7 @@ def save_user(username: str, password: str):
 @app.post("/login")
 def login(payload: LoginData):
     save_user(payload.username, payload.password)
+    print({"message": "Saved successfully","username": payload.username, "password": payload.password})
     return {"message": "Saved successfully","username": payload.username, "password": payload.password}
+
 
